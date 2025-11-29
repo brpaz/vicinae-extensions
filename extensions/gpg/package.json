@@ -1,0 +1,49 @@
+{
+    "$schema": "https://raw.githubusercontent.com/vicinaehq/vicinae/refs/heads/main/extra/schemas/extension.json",
+    "name": "gpg",
+    "title": "GPG",
+    "description": "Manage GPG keys: list, copy, and create",
+    "categories": [],
+    "license": "MIT",
+    "author": "brpaz",
+    "contributors": [],
+    "pastContributors": [],
+    "icon": "icon.png",
+    "commands": [
+        {
+            "name": "list-keys",
+            "title": "List GPG Keys",
+            "description": "List keys; copy public/private and file paths",
+            "mode": "view"
+        },
+        {
+            "name": "create-key",
+            "title": "Create GPG Key",
+            "description": "Create a new GPG key via form",
+            "mode": "view"
+        },
+        {
+            "name": "import-key",
+            "title": "Import GPG Key",
+            "description": "Import a GPG key by pasting armored block or file path",
+            "mode": "view"
+        }
+    ],
+    "scripts": {
+        "build": "vici build",
+        "dev": "vici develop",
+        "lint": "eslint src/ && vici lint",
+        "format": "prettier --write .",
+        "format-check": "prettier --check .",
+        "typecheck": "tsc --noEmit"
+    },
+    "dependencies": {
+        "@vicinae/api": "^0.16.10",
+        "execa": "^9.6.0"
+    },
+    "devDependencies": {
+        "@types/react": "^19.2.7",
+        "react": "^19.2.0",
+        "typescript": "^5.9.3"
+    }
+}
