@@ -1,0 +1,71 @@
+{
+  "$schema": "https://raw.githubusercontent.com/vicinaehq/vicinae/refs/heads/main/extra/schemas/extension.json",
+  "name": "backblaze",
+  "title": "Backblaze",
+  "description": "Manage your Backblaze B2 cloud storage account",
+  "categories": [],
+  "license": "MIT",
+  "author": "brpaz",
+  "contributors": [],
+  "pastContributors": [],
+  "icon": "icon.png",
+  "commands": [
+    {
+      "name": "list-buckets",
+      "title": "List Buckets",
+      "subtitle": "Backblaze B2",
+      "description": "Lists your Backblaze B2 buckets",
+      "mode": "view"
+    },
+    {
+      "name": "open-console",
+      "title": "Open Management Console",
+      "subtitle": "Backblaze B2",
+      "description": "Open the Backblaze B2 console in the browser",
+      "mode": "no-view"
+    }
+  ],
+  "preferences": [
+    {
+      "name": "applicationKeyId",
+      "title": "Application Key ID",
+      "type": "password",
+      "required": true,
+      "description": "Your Backblaze B2 Master Application Key ID"
+    },
+    {
+      "name": "applicationKey",
+      "title": "Application Key",
+      "type": "password",
+      "required": true,
+      "description": "Your Backblaze B2 Master Application Key"
+    }
+  ],
+  "scripts": {
+    "build": "vici build",
+    "dev": "vici develop",
+    "lint": "eslint src/ && vici lint",
+    "format": "prettier --write .",
+    "format-check": "prettier --check .",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@vicinae/api": "^0.16.10",
+    "backblaze-b2": "^1.7.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "@types/backblaze-b2": "^1.5.6",
+    "@types/react": "^19.2.4",
+    "@typescript-eslint/eslint-plugin": "^8.46.4",
+    "@typescript-eslint/parser": "^8.46.4",
+    "eslint": "^9.39.1",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "eslint-plugin-react": "^7.37.5",
+    "globals": "^16.5.0",
+    "prettier": "^3.6.2",
+    "typescript": "^5.9.2",
+    "typescript-eslint": "^8.46.4"
+  }
+}
